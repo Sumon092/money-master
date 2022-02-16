@@ -24,9 +24,22 @@ document.getElementById('calculate-button').addEventListener('click', function (
     console.log(totalExpense);
 
     document.getElementById('total-expense').innerText = totalExpense;
-    const Balance = totalIncome - totalExpense;
-    document.getElementById('balance-money').innerText = Balance;
+    const balance = totalIncome - totalExpense;
+    document.getElementById('balance-money').innerText = balance;
+
+
 });
 
+document.getElementById('save-button').addEventListener('click', function () {
+    let balance = document.getElementById('balance-money').innerText;
+    const savingPercent = document.getElementById('save-percent-amount').value;
+    savingInput = parseFloat(savingPercent);
+
+    let savings = balance * savingInput / 100;
+    document.getElementById('saving-total').innerText = savings;
+    const remainingBalance = balance - savings;
+    document.getElementById('remain-balance').innerText = remainingBalance;
+
+})
 
 
