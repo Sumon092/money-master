@@ -1,34 +1,53 @@
-/* function totalExpense() {
-    const ExpenseType = document.getElementById(areaOf + '-expense');
-    const ExpenseAmount = parseFloat(foodExpense.value);
-} */
+function totalExpense(areaOfExpense) {
+    const foodExpense = document.getElementById(areaOfExpense);
+    let foodExpenseAmount = parseFloat(foodExpense.value);
+    return foodExpenseAmount;
+};
 
-document.getElementById('calculate-button').addEventListener('click', function () {
+function calculateButton() {
+    // total income
+    const income = document.getElementById('total-income');
+    const totalIncome = parseFloat(income.value);
+    // total expense area
+    foodExpenseAmount = totalExpense('food-expense');
+    rentExpenseAmount = totalExpense('rent-expense');
+    clothingExpenseAmount = totalExpense('clothing-expense');
+
+    // get total expense
+    const expenseTotal = foodExpenseAmount + rentExpenseAmount + clothingExpenseAmount;
+
+    document.getElementById('total-expense').innerText = expenseTotal;
+    const balance = totalIncome - expenseTotal;
+    document.getElementById('balance-money').innerText = balance;
+}
+
+/* document.getElementById('calculate-button').addEventListener('click', function () {
     const income = document.getElementById('total-income');
     // console.log(income, "income button coming");
     const totalIncome = parseFloat(income.value);
     // console.log(incomeAmount);
-
-    const foodExpense = document.getElementById('food-expense');
-    const foodExpenseAmount = parseFloat(foodExpense.value);
-    console.log(foodExpenseAmount, 'food expense');
+    // totalExpense(areaOfExpense);
+    // const foodExpense = document.getElementById(areaOfExpense + '-expense');
+    // let foodExpenseAmount = totalExpense('food-expense');
+    // const foodExpenseAmount = parseFloat(foodExpense.value);
+    // console.log(foodExpenseAmount, 'food expense');
     const rentExpense = document.getElementById('rent-expense');
     const rentExpenseAmount = parseFloat(rentExpense.value);
-    console.log(rentExpenseAmount)
+    // console.log(rentExpenseAmount)
 
     const clothingExpense = document.getElementById('clothing-expense');
     const clothingExpenseAmount = parseFloat(clothingExpense.value);
-    console.log(clothingExpenseAmount);
+    // console.log(clothingExpenseAmount);
 
     const totalExpense = foodExpenseAmount + rentExpenseAmount + clothingExpenseAmount;
-    console.log(totalExpense);
+    // console.log(totalExpense);
 
     document.getElementById('total-expense').innerText = totalExpense;
     const balance = totalIncome - totalExpense;
     document.getElementById('balance-money').innerText = balance;
 
 
-});
+}); */
 
 document.getElementById('save-button').addEventListener('click', function () {
     let balance = document.getElementById('balance-money').innerText;
@@ -39,7 +58,6 @@ document.getElementById('save-button').addEventListener('click', function () {
     document.getElementById('saving-total').innerText = savings;
     const remainingBalance = balance - savings;
     document.getElementById('remain-balance').innerText = remainingBalance;
-
 })
 
 

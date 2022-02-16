@@ -26,7 +26,7 @@
                     <div class="col">
                         <div class="p-3 border bg-light">
 
-                            <form>
+                            <div>
                                 <h4>Income</h4>
                                 <p>Income <input id="total-income" class="form-control" type="text" name="" id=""></p>
                                 <h4>Expense</h4>
@@ -35,19 +35,19 @@
                                 <p>clothes <input id="clothing-expense" class="form-control" type="text" name="" id="">
                                 </p>
                                 <button type="submit" class="btn btn-primary px-5 py-3 fw-bold"
-                                    id="calculate-button">CALCULATE</button>
-                            </form>
+                                    onclick="calculateButton();">CALCULATE</button>
+                            </div>
                             <div>
-                                <h5>Total Expense: $<span id="total-expense">5500</span></h5>
-                                <h5>Balance: $<span id="balance-money">4500</span></h5>
+                                <h5>Total Expense: $<span id="total-expense">0</span></h5>
+                                <h5>Balance: $<span id="balance-money">0</span></h5>
                                 <p class="d-inline">Save : <input class="rounded" type="text" name=""
                                         id="save-percent-amount"></p>
                                 <span id="save-percentage"> % </span>
 
                                 <button type="submit" class="btn btn-primary px-3 fw-bold"
                                     id="save-button">SAVE</button>
-                                <h5 class="m-2">Saving Amount : $<span id="saving-total">5500</span></h5>
-                                <h5 class="m-2">Remaining Balance: $<span id="remain-balance">4500</span></h5>
+                                <h5 class="m-2">Saving Amount : $<span id="saving-total">0</span></h5>
+                                <h5 class="m-2">Remaining Balance: $<span id="remain-balance">0</span></h5>
                             </div>
 
 
