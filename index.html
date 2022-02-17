@@ -10,20 +10,20 @@
     <title>My Cashbook</title>
 </head>
 
-<body>
-    <header>
-        <h2 class="text-center m-5 display-1 fw-bold text-bg-info">My Cashbook</h2>
+<body class="vh-100">
+    <header class="h-20">
+        <h2 class="text-center m-5 display-1 fw-bold">My Cashbook</h2>
     </header>
     <main>
-        <section>
+        <section class="h-80">
             <div class="container overflow-hidden">
-                <div class="row gx-5">
+                <div class="row gx-5 d-flex align-items-center justify flex-column flex-sm-row">
                     <div class="col col-sm-6">
-                        <div class=" border bg-light">
+                        <div class="border bg-light h-100 w-100">
                             <img class="img-fluid" src="images/Acc manager.jpg" alt="">
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col col-sm-6">
                         <div class="p-3 border bg-light">
 
                             <div>
@@ -34,7 +34,7 @@
                                 <p>Rent <input id="rent-expense" class="form-control" type="text" name="" id=""></p>
                                 <p>clothes <input id="clothing-expense" class="form-control" type="text" name="" id="">
                                 </p>
-                                <button type="submit" class="btn btn-primary px-5 py-3 fw-bold"
+                                <button type="submit" class="btn btn-primary px-5 py-3 fw-bold mt-3 mb-3"
                                     onclick="calculateButton();">CALCULATE</button>
                             </div>
                             <div>
